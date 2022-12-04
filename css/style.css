@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --dark: #0A0C1C;
+    --dark-purple: #1B1937;
+    --purple: #AB5CDB;
+    --white: #FFF;
+    --font: 'Inter', sans-serif;
+}
+body{
+    background: var(--dark);
+    font-family: var(--font);
+}
+.component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--white);
+    margin-bottom: 25px;
+}
+h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+}
+p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--white);
+    opacity: 0.75;
+}
+
+.card-component{
+    max-width: 1110px;
+    width: 1200px;
+    height: 446px;
+    background: var(--dark-purple);
+    display: flex;
+    box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.203087);
+    border-radius: 8px;
+}
+h2 span{
+    color: var(--purple);
+}
+
+/* describe of image */
+.describe-image{
+    width: 555px;
+    margin: 55px 70px;
+    padding: 0px 15px;
+}
+/* ranking */
+.ranking{
+    display: flex;
+    margin-top: 65px;
+    gap: 64px;
+}
+.style-ranking{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+/* image */
+.image{
+    width: 60%;
+    background:linear-gradient(rgba(171, 92, 219, .4),rgba(171, 92, 219, .4)), url(../img/Bitmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0 8px 8px 0;
+}
+
+
+@media screen and (max-width: 1114px) {
+    h2{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .card-component{
+        width: 600px;
+        grid-template-rows: repeat(2,min-content);
+        height: min-content;
+        display: grid;
+    }
+    .image{
+        grid-row: 1/2;
+        width: 100%;
+        height: 346px;
+        border-radius: 8px 8px 0 0;
+    }
+    .describe-image{
+        grid-row: 2/3;
+        margin: 0;
+        padding: 0;
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    .component{
+        margin: 90px 0;
+    }
+   
+    .ranking{
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 16px;
+    }
+
+
+}
+@media screen and (max-width: 610px) {
+    
+    .card-component{
+        width: 300px;
+    }
+    .image{
+        width: 100%;
+    }
+    .component{
+        margin: 100px 0;
+    }
+    .describe-image{
+        width: 270px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+} 
